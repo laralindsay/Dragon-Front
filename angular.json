@@ -20,9 +20,7 @@
             "outputPath": "dist/dragon-front",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -30,11 +28,37 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/assets/styles/theme/theme.scss",
+                "bundleName": "theme"
+              },
+              {
+                "input": "src/assets/styles/primeng/index.scss",
+                "bundleName": "primeng",
+                "inject": false
+              },
+              {
+                "input": "src/assets/styles/bootstrap/bootstrap.scss",
+                "bundleName": "bootstrap"
+              },
+              {
+                "input": "./src/assets/styles/material/material.scss",
+                "bundleName": "material"
+              },
+              {
+                "input": "./src/assets/styles/custom/index.scss",
+                "bundleName": "custom"
+              },
+              {
+                "input": "src/assets/styles/flaticon/flaticon.scss",
+                "bundleName": "flaticon"
+              }
             ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
+            "externalDependencies":[""],
             "ssr": {
               "entry": "server.ts"
             }
@@ -84,10 +108,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -95,12 +116,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
-            "scripts": []
+            "scripts": ["../node_modules/chart.js/dist/chart.js"]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "bfb1e474-148a-4678-be36-e8c82e05f9fe"
   }
 }
