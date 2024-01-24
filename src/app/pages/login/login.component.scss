@@ -1,0 +1,27 @@
+@import "../../../assets/styles/theme/variables";
+
+:host {
+  .form-group {
+    ::ng-deep {
+      input {
+        background-color: transparent;
+        color: $color-light;
+        border-radius: 25px;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  .sign-in {
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.73);
+    color: rgba(190, 128, 194, 0.61);
+    border: none;
+  }
+
+  .sign-up {
+    border-radius: 25px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0);
+  }
+}
