@@ -1,0 +1,23 @@
+@import "../../../../assets/styles/theme/variables";
+
+:host {
+  p-carousel {
+    ::ng-deep {
+      .p-carousel-indicators {
+        display: none !important;
+      }
+      h6,
+      h3 {
+        color: $color-primary;
+      }
+    }
+
+    .img-ico {
+      width: 15px;
+      margin: 0 10px 0 0;
+    }
+    .img-dg img {
+      height: 12rem;
+    }
+  }
+}

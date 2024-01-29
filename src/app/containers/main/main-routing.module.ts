@@ -11,12 +11,12 @@ const routes: Routes = [
           {
             path: '',
             pathMatch: 'full',
-            redirectTo: 'dashboard'
+            redirectTo: 'home'
           },
-          // {
-          //   path: 'dashboard',
-          //   loadChildren: () => import('@pages/dashboard/dashboard.routes').then(m => m.DashboardRoutes),
-          // },
+          {
+            path: 'home',
+            loadChildren: () => import('@pages/home/home.routes').then(m => m.HomeRoutes),
+          },
         ]
     }
 ];

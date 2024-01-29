@@ -1,0 +1,47 @@
+<div class="d-flex align-items-center justify-content-between">
+  <div class="w-100">
+    <p-carousel
+      [value]="products"
+      [numVisible]="3"
+      [numScroll]="3"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-product pTemplate="item">
+        <div
+          class="border-1 surface-border border-round m-2 text-center px-3 card"
+        >
+          <div class="edit-btn w-100 d-flex align-items-start">
+            <p-button
+              icon="pi pi-pencil"
+              [rounded]="true"
+              [text]="true"
+            ></p-button>
+          </div>
+          <div class="mb-3 img-dg">
+            <img
+              src="../../../../assets/images/{{ product.image }}"
+              [alt]="product.name"
+              class="w-6 shadow-2"
+            />
+          </div>
+          <div>
+            <h3 class="mb-1">{{ product.name }}</h3>
+
+            <div class="d-flex column justify-content-center align-items-center">
+              <img
+              src="../../../../assets/images/{{product.icon}}"
+              class="img-ico"
+              />
+              <h6 class="m-0 type">{{ product.type }}</h6>
+            </div>
+            <div class="car-buttons m-3">
+              <h6>{{ product.description }}</h6>
+            </div>
+            <h6>{{ product.createdAt }}</h6>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

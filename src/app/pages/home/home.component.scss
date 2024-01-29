@@ -1,0 +1,32 @@
+@import "../../../assets/styles/theme/variables";
+
+:host {
+  .home-container {
+    width: max-content;
+    transition: background 0.5s;
+
+    background: rgb(202, 103, 208);
+    background: linear-gradient(
+      90deg,
+      rgba(202, 103, 208, 1) 0%,
+      rgba(255, 192, 200, 1) 48%,
+      rgba(132, 160, 233, 1) 100%
+    );
+
+    .title {
+      font-family: "Sceageus";
+      color: $color-primary;
+      font-size: 35px;
+    }
+  }
+
+  .auth-content {
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.09);
+    padding: 1em;
+    min-width: 228px;
+    height: 351px;
+    box-shadow: 8px 8px 16px rgb(0 0 0 / 25%);
+    z-index: 10;
+  }
+}
